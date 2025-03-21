@@ -2,7 +2,6 @@ require "quickbooks_online_ruby/version"
 require 'quickbooks_online_ruby/config'
 
 require "faraday"
-require "faraday_middleware"
 
 module QuickbooksOnlineRuby
   autoload :AbstractClient, 'quickbooks_online_ruby/abstract_client'

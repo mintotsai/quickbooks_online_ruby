@@ -188,7 +188,7 @@ module QuickbooksOnlineRuby
       #
       # Returns the results of the query.
       def query(query)
-        url = "query?query=#{URI.encode(query)}"
+        url = "query?query=#{URI.encode_www_form_component(query)}"
         api_get(url).body
       end
 

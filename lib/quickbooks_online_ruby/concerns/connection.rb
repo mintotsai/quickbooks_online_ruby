@@ -42,7 +42,7 @@ module QuickbooksOnlineRuby
           # Caches GET requests.
           # builder.use      QuickbooksOnlineRuby::Middleware::Caching, cache, options if cache
           # Follows 30x redirects.
-          builder.use      FaradayMiddleware::FollowRedirects
+          builder.use Faraday::FollowRedirects::Middleware, limit: 3
           # Raises errors for 40x responses.
           builder.use      QuickbooksOnlineRuby::Middleware::RaiseError
           # Parses returned JSON response into a hash.
